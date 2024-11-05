@@ -23,11 +23,11 @@ msgid ""
 "Switches your glasses into side-by-side mode and doubles the width of the "
 "display."
 msgstr ""
-"Переключает очки в режим «сторона к стороне» и удваивает ширину дисплея."
+"Переключает очки в режим «бок о бок» и удваивает ширину дисплея."
 
 #: src/connecteddevice.py:18
 msgid "This feature is not currently supported for your device."
-msgstr "Эта функция в настоящее время не поддерживается для вашего устройства."
+msgstr "В настоящее эта функция не поддерживается на вашем устройстве."
 
 #: src/licensedialogcontent.py:63
 msgid "Paid Tier Status"
@@ -81,11 +81,19 @@ msgstr "<b>${amount}</b> USD"
 
 #: src/licensetierrow.py:43
 msgid " to renew"
-msgstr " для обновления"
+msgstr " для обновления" #Продления
+#
+# Comment:
+# Is this button is a link "to renew" your license? (Means that it's gonna redirect you to the website where you can pay for subscription)
+
 
 #: src/licensetierrow.py:45
 msgid " to upgrade"
-msgstr " для апгрейда"
+msgstr " для апгрейда" #Обновления
+#
+# Comment:
+# Same as above
+
 
 #: src/licensetierrow.py:47
 msgid "Paid through next renewal period"
@@ -101,15 +109,27 @@ msgstr "Продуктивный режим"
 
 #: src/licensetierrow.py:63
 msgid " - renewing monthly"
-msgstr " - ежемесячное обновление"
+msgstr " - ежемесячное обновление" # Обновлять ежемесечно
+#
+# Comment:
+# Is this button for renewing your license?
+
 
 #: src/licensetierrow.py:64
 msgid " - renewing yearly"
-msgstr " - ежегодное обновление"
+msgstr " - ежегодное обновление" # Обновлять ежегодно
+#
+# Comment:
+# Same as above
+
 
 #: src/licensetierrow.py:65
 msgid "with lifetime access"
-msgstr "с пожизненным доступом"
+msgstr "с пожизненным доступом" # Пожизненный доступ
+#
+# Comment:
+# Is all of the button above is  just a status of subscription?
+
 
 #: src/licensetierrow.py:72
 msgid "Monthly"
@@ -144,6 +164,10 @@ msgstr "1 день"
 #, python-brace-format
 msgid "{time_remaining} days"
 msgstr "{time_remaining} дней"
+#
+# Comment:
+# If it's a countdown for license expiration, I'd use "Дней до истечения лицензии: {time_remaining}" or something simmilar
+
 
 #: src/gtk/connected-device.ui:21
 msgid "connected"
@@ -176,6 +200,12 @@ msgstr "Режим следования"
 #: src/gtk/connected-device.ui:67
 msgid "Keep the virtual display near the center of your view."
 msgstr "Поддерживает виртуальный дисплей вблизи центра вашего зрения."
+#
+# Comment:
+# What about "Поддерживать виртуальный дисплей в вашем поле зрения" or "Поддерживать виртуальный дисплй вблизи центра поле зрения"?
+# I believe that this line means "To keep". Also do we need "virtual display" if the product based on AR glasses?
+# Might as well be "Поддерживать дисплей в вашем поле зрения" means "Keep (virtual) display in your field of view"
+
 
 #: src/gtk/connected-device.ui:77
 msgid "Curved display"
@@ -195,7 +225,7 @@ msgstr "Настройки"
 
 #: src/gtk/connected-device.ui:94
 msgid "Display distance"
-msgstr "Расстояние дисплея"
+msgstr "Расстояние до дисплея"
 
 #: src/gtk/connected-device.ui:95
 msgid ""
@@ -214,20 +244,28 @@ msgid ""
 "Combine with display distance to achieve a comfortable level of depth and "
 "size."
 msgstr ""
-"Комбинируйте с расстоянием дисплея, чтобы достичь комфортного уровня глубины "
+"Используйте вместе с расстоянием до дисплея, чтобы достичь комфортного уровня глубины "
 "и размера."
 
 #: src/gtk/connected-device.ui:152
 msgid "Display toggle distances"
 msgstr "Переключения расстояние дисплея"
+#
+# Comment:
+# Don't quiet get it. Need an example
+
 
 #: src/gtk/connected-device.ui:153
 msgid ""
 "Use the buttons to capture the current display distance for use with the "
 "keyboard shortcut."
 msgstr ""
-"Используйте кнопки, чтобы зафиксировать текущее расстояние дисплея для "
+"Используйте кнопки на очках, чтобы зафиксировать текущее расстояние дисплея для "
 "использования с сочетанием клавиш."
+#
+# Comment:
+# Need to find a word that represents "shortcut" or "hotkey"
+
 
 #: src/gtk/connected-device.ui:178
 msgid "Follow threshold"
@@ -236,7 +274,7 @@ msgstr "Порог следования"
 #: src/gtk/connected-device.ui:179
 msgid "How far away you can look before the display follows."
 msgstr ""
-"Как далеко вы можете отвернуть взгляд, прежде чем дисплей последует за вами."
+"Как далеко вы можете отвернуться, прежде чем дисплей последует за вами."
 
 #: src/gtk/connected-device.ui:209 src/gtk/connected-device.ui:215
 msgid "Keyboard Shortcuts"
@@ -265,11 +303,15 @@ msgstr "Сочетание клавиш для перецентровки дис
 
 #: src/gtk/connected-device.ui:248
 msgid "Pin the virtual display to the current position."
-msgstr "Фиксировать виртуальный дисплей в текущем положении."
+msgstr "Зафиксировать виртуальный дисплей в текущем положении."
 
 #: src/gtk/connected-device.ui:276
 msgid "Display distance shortcut"
 msgstr "Сочетание клавиш для расстояния дисплея"
+#
+# Comment:
+# Have to think on it
+
 
 #: src/gtk/connected-device.ui:277
 msgid "Quickly toggle between two predefined distances."
@@ -322,22 +364,15 @@ msgstr ""
 
 #: src/gtk/connected-device.ui:383
 msgid "Fast SBS mode switching"
-msgstr "Быстрое переключение режима SBS"
-#
-# Comment:
-# If SBS = Side By Side, I'd change it to "Быстрое переключение режима в бок о бок"
+msgstr "Быстрое переключение режима «бок о бок»"
 
 #: src/gtk/connected-device.ui:384
 msgid ""
 "Switches glasses to SBS mode immediately when plugged in, if widescreen mode "
 "is on. May cause instability."
 msgstr ""
-"Переключает очки в режим SBS сразу при подключении, если режим широкого "
+"Переключает очки в режим «бок о бок» сразу при подключении, если режим широкого "
 "экрана включен. Может вызвать нестабильность."
-#
-# Comment:
-# if SBS mode means side-by-side I'd assume to use "бок о бок" in Russian localization
-# instead of SBS acronym
 
 #: src/gtk/connected-device.ui:394
 msgid "Movement look-ahead"
@@ -369,6 +404,10 @@ msgstr "Масштабирование текста ниже 1.0 будет си
 #: src/gtk/failed-verification.ui:13
 msgid "Breezy Desktop GNOME invalid setup"
 msgstr "Недействительная настройка Breezy Desktop GNOME"
+#
+# Comment:
+# Have to think on it
+
 
 #: src/gtk/failed-verification.ui:14
 msgid ""
@@ -381,10 +420,7 @@ msgstr ""
 
 #: src/gtk/license-dialog-content.ui:15
 msgid "Donate"
-msgstr "Донатить"
-#
-# Comment:
-# "Пожертвовать" is more generic word in Russian Language
+msgstr "Пожертвовать"
 
 #: src/gtk/license-dialog-content.ui:31
 msgid "Request a token"
@@ -409,28 +445,20 @@ msgstr "Breezy Desktop не смог обнаружить никаких под�
 #: src/gtk/no-device.ui:23
 #, fuzzy
 msgid "Auto-enable XR effect"
-msgstr "Эффект XR"
-#
-# Comment:
-# I think that "Автоматически включать эффект XR" is better way to describe this
-# If this message appearse when you wan't to toggle "auto-enable XR effect" checkbox
-# Also "Автоматическое включение эффекта XR" can be used
+msgstr "Автоматическое включение эффекта XR"
 
 #: src/gtk/no-device.ui:24
 msgid ""
 "Automatically enable the Breezy Desktop XR effect when supported glasses are "
 "connected."
 msgstr ""
-"Автоматически включает Breezy Desktop XR эффект когда подключены поддерживаемые"
+"Автоматически включать Breezy Desktop XR эффект когда подключены поддерживаемые"
 "очки."
 
 #: src/gtk/no-device.ui:34
 #, fuzzy
 msgid "Start in widescreen mode"
-msgstr "Режим широкого экрана"
-#
-# Comment:
-# Or we may use "Запустить в режиме широкого экрана" if it's about starting something in widescreen mode
+msgstr "Запускать в режиме широкого экрана"
 
 #: src/gtk/no-device.ui:35
 msgid "Widescreen mode is not supported for all glasses."
@@ -496,7 +524,7 @@ msgstr ""
 "          При первом использовании Breezy Desktop требуется интернет-"
 "соединение для получения лицензии вашего устройства.\n"
 "          \n"
-"          Не волнуйтесь, на данный момент нет обязательства донатить. Если "
+"          Не волнуйтесь, на данный момент нет обязательства платить. Если "
 "вы не сделали этого, вам будет предоставлена пробная лицензия, чтобы вы "
 "могли решить, подходит ли вам Breezy Desktop.\n"
 "          \n"
@@ -507,7 +535,7 @@ msgstr ""
 
 #: src/gtk/no-license.ui:27
 msgid "Try Again"
-msgstr "Попробовать еще раз"
+msgstr "Попробуйте еще раз"
 
 #: src/gtk/shortcut-dialog.ui:5
 msgid "Assign Keyboard Shortcut"
@@ -539,11 +567,7 @@ msgstr "Функции повышения производительности �
 
 #: src/gtk/window.ui:95
 msgid "Force Reset"
-msgstr "Сброс"
-#
-# Comment:
-# If this button will reset software to "Manufactured state", I'd assume to
-# Use "Сбросить до заводских настроек"
+msgstr "Сброс к настройкам по умолчанию"
 
 #: src/gtk/window.ui:99
 msgid "About BreezyDesktop"
