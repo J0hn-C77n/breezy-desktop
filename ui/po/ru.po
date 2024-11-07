@@ -27,7 +27,7 @@ msgstr ""
 
 #: src/connecteddevice.py:18
 msgid "This feature is not currently supported for your device."
-msgstr "В настоящее эта функция не поддерживается на вашем устройстве."
+msgstr "В настоящее время эта функция не поддерживается на вашем устройстве."
 
 #: src/licensedialogcontent.py:63
 msgid "Paid Tier Status"
@@ -81,19 +81,13 @@ msgstr "<b>${amount}</b> USD"
 
 #: src/licensetierrow.py:43
 msgid " to renew"
-msgstr " для обновления" #Продления
-#
-# Comment:
-# Is this button is a link "to renew" your license? (Means that it's gonna redirect you to the website where you can pay for subscription)
-
+msgstr " Продлить лицензию" 
+# Fuzzy
 
 #: src/licensetierrow.py:45
 msgid " to upgrade"
-msgstr " для апгрейда" #Обновления
-#
-# Comment:
-# Same as above
-
+msgstr " Повысить лицензию" 
+# Fuzzy
 
 #: src/licensetierrow.py:47
 msgid "Paid through next renewal period"
@@ -109,27 +103,15 @@ msgstr "Продуктивный режим"
 
 #: src/licensetierrow.py:63
 msgid " - renewing monthly"
-msgstr " - ежемесячное обновление" # Обновлять ежемесечно
-#
-# Comment:
-# Is this button for renewing your license?
-
+msgstr " - Обновляется ежемесячно"
 
 #: src/licensetierrow.py:64
 msgid " - renewing yearly"
-msgstr " - ежегодное обновление" # Обновлять ежегодно
-#
-# Comment:
-# Same as above
-
+msgstr " - Обновляется ежегодно"
 
 #: src/licensetierrow.py:65
 msgid "with lifetime access"
-msgstr "с пожизненным доступом" # Пожизненный доступ
-#
-# Comment:
-# Is all of the button above is  just a status of subscription?
-
+msgstr "Пожизненный доступ"
 
 #: src/licensetierrow.py:72
 msgid "Monthly"
@@ -154,7 +136,7 @@ msgstr "1 час"
 #: src/time.py:17
 #, python-brace-format
 msgid "{time_remaining} hours"
-msgstr "{time_remaining} часов"
+msgstr "{time_remaining} часов" # Need to make different text, because of 2 hours != 2 чаосв, it's 2 часа. Assume to use "часов: {time_remaining}"
 
 #: src/time.py:20
 msgid "1 day"
@@ -164,10 +146,6 @@ msgstr "1 день"
 #, python-brace-format
 msgid "{time_remaining} days"
 msgstr "{time_remaining} дней"
-#
-# Comment:
-# If it's a countdown for license expiration, I'd use "Дней до истечения лицензии: {time_remaining}" or something simmilar
-
 
 #: src/gtk/connected-device.ui:21
 msgid "connected"
@@ -219,6 +197,7 @@ msgstr "Переключается между плоскими и изогнут
 # I think that in this case it's "Переключить между плоским и изогнутым дисплеем"
 # At least if this text appears where you can switch between these modes
 
+
 #: src/gtk/connected-device.ui:91
 msgid "Adjustments"
 msgstr "Настройки"
@@ -249,11 +228,7 @@ msgstr ""
 
 #: src/gtk/connected-device.ui:152
 msgid "Display toggle distances"
-msgstr "Переключения расстояние дисплея"
-#
-# Comment:
-# Don't quiet get it. Need an example
-
+msgstr "Переключение расстояния дисплея"
 
 #: src/gtk/connected-device.ui:153
 msgid ""
